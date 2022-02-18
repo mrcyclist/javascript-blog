@@ -29,8 +29,6 @@
                     <div class="post-tags">
                     <p><strong>Tags:</strong></p>
                     <ul class="list list-horizontal">
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">tutorials</a></li>
                     </ul>
                     </div>
                 </article>        
@@ -196,19 +194,19 @@
     <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
   </script>
   <script id="template-tag-link" type="text/x-handlebars-template">
-    <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+    <li><a href="#tag-{{ title }}"><span>{{ title }}</span></a></li>
   </script>
   <script id="template-author-link" type="text/x-handlebars-template">
-    <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+    <li><a href="#author-{{ title }}"><span>{{ title }}</span></a></li>
   </script>
   <script id="template-tagCloud-link" type="text/x-handlebars-template">
     {{#each tags}}
-    <a class="{{className}}" href="#{{ tag }}"><span>{{ tag }}</span></a>
+    <a class="{{className}}" href="#tag-{{ tag }}"><span>{{ tag }}({{count}})</span></a>
     {{/each}}
   </script>
   <script id="template-authorCloud-link" type="text/x-handlebars-template">
     {{#each authors}}
-    <li><a href="#{{ author }}"><span>{{ author }}</span></a></li>
+    <li><a href="#author-{{ author }}"><span>{{ author }}</span>{{count}}</a></li>
     {{/each}}
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
