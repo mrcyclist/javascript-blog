@@ -451,7 +451,7 @@ function authorClickHandler(event){
 
   /* find all tag links with "href" attribute equal to the "href" constant */
 
-  const authorLinks = document.querySelectorAll('a[href="' + href + '"]' == href); 
+  const authorLinks = document.querySelectorAll('a[href="' + href + '"]'); 
 
   /* START LOOP: for each found tag link */
 
@@ -466,7 +466,7 @@ function authorClickHandler(event){
 
   /* execute function "generateTitleLinks" with article selector as argument */
 
-  generateTitleLinks('[data-author~="' + author + '"]');
+  generateTitleLinks('[data-author="' + author + '"]');
 
 }
 
